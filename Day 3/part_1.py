@@ -8,15 +8,18 @@ total = 0
 priorities = {}
 contents = {}
 
+with open("input.txt") as infile:
+    lines = infile.readlines()
+
+for char in char_range("a", "z"):
+    priorities[char] = ord(char) - 96 # "a" has ascii value 97, so subtract 96 to get priority 1
+for char in char_range("A", "Z"):
+    priorities[char] = ord(char) - 38 # "A" has ascii value 65, so subtract 38 to get priority 27
+
+
 if __name__ == '__main__':
 
-    with open("input.txt") as infile:
-        lines = infile.readlines()
 
-    for char in char_range("a", "z"):
-        priorities[char] = ord(char) - 96 # "a" has ascii value 97, so subtract 96 to get priority 1
-    for char in char_range("A", "Z"):
-        priorities[char] = ord(char) - 38 # "A" has ascii value 65, so subtract 38 to get priority 27
 
     for line in lines:
         print(f"\nRaw line: {line}")
