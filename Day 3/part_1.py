@@ -1,4 +1,3 @@
-
 # quick function to make a range() equivalent for characters
 # unlike normal range function, include last
 def char_range(first, last):
@@ -39,4 +38,3 @@ if __name__ == '__main__':
         contents.clear()
     print(f"Total priorities of duplicate items: {total}")
     
-

@@ -36,5 +36,3 @@ for line in lines:
         elif opponent == "C":
             points += 3
 print(f"Total number of points won: {points}. Total matches played: {len(lines)}")
-
-
